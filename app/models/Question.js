@@ -4,7 +4,8 @@ logger = require( '../logger/logger.js' );
 
 var QuestionSchema = new Schema({
 	number: Number,
-	question : String,
-	answer : String
+	quest : String,
+	answer : String,
+	category : String
 });
 module.exports = mongoose.model('Question', QuestionSchema);

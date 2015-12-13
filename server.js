@@ -30,7 +30,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 var apiRoutes = require('./app/routes/categoryapi')(app, express);
-app.use('/api/catrgory', apiRoutes);
+app.use('/api/category', apiRoutes);
 
 var apiRoutes = require('./app/routes/questionapi')(app, express);
 app.use('/api/question', apiRoutes);

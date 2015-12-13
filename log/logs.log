@@ -1,2 +1,6 @@
 {"level":"debug","message":"questionapi apiRouter /get started","timestamp":"2015-12-13T18:41:47.989Z"}
 {"level":"debug","message":"questionapi apiRouter /get ended","timestamp":"2015-12-13T18:41:47.991Z"}
+{"level":"debug","message":"categoryapi apiRouter /post started","timestamp":"2015-12-13T19:08:40.293Z"}
+{"level":"debug","message":"categoryapi apiRouter /post ended","timestamp":"2015-12-13T19:08:40.302Z"}
+{"level":"debug","message":"categoryapi apiRouter /get started","timestamp":"2015-12-13T19:09:27.735Z"}
+{"level":"debug","message":"categoryapi apiRouter /get ended","timestamp":"2015-12-13T19:09:27.738Z"}
