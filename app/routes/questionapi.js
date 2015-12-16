@@ -33,20 +33,28 @@ module.exports = function(app, express) {
 		});
 		logger.debug('questionapi apiRouter /post ended');
 
-	}).get('/', function(req, res) {
+	}).get('/:categoryType', function(req, res) {
 		logger.debug('questionapi apiRouter /get started');
-		Question.find({}, function(err, question) {
-			if (err) {
-				console.log(err);
-				return res.json({
-					success : false,
-					message : 'Question not saved. ',
-					returnCode : '1'
-				});
-			}
-			return res.json(question);
-		});
-		logger.debug('questionapi apiRouter /get ended');
+		console.log(JSON.stringify('req.params'+req.params));
+		console.log(req.params.categoryType);
+			    Question.find({
+	        "category": req.params.categoryType
+	    }, function (err, questions) {
+	        if (err)
+	            res.send(err);
+	        if (!questions) {
+				console.log('ERROR');
+	            res.json({
+	                success: false,
+	                message: 'No questions for this category. ',
+	                returnCode: '1'
+	            });
+	        }
+	        if (questions) {
+				console.log(questions);
+	            res.json(questions);
+	        }
+	    });
 
 	});
 
