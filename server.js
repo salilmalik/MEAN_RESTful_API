@@ -35,6 +35,8 @@ app.use('/api/category', apiRoutes);
 var apiRoutes = require('./app/routes/questionapi')(app, express);
 app.use('/api/question', apiRoutes);
 
+var apiRoutes = require('./app/routes/userapi')(app, express);
+app.use('/api/user', apiRoutes);
 
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/app/index.html'));
